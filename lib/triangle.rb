@@ -30,11 +30,10 @@ class Triangle
       raise TriangleError
     end
   end
+end
 
-  class TriangleError < StandardError
-    def message
-      "Triangle does not have valid lengths"
-    end
+class TriangleError < StandardError
+  def message
+    "Triangle does not have valid lengths"
   end
-
 end
