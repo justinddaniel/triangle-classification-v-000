@@ -1,6 +1,5 @@
 class Triangle
 
-  include TriangleError
 
   attr_accessor :length1, :length2, :length3
 
