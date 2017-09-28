@@ -11,7 +11,10 @@ class Triangle
   def kind
     if self.length1 + self.length2 > self.length3 &&
       self.length1 + self.length3 > self.length2 &&
-      self.length2 + self.length3 > self.length1
+      self.length2 + self.length3 > self.length1 &&
+      self.length1 > 0 &&
+      self.length2 > 0 &&
+      self.length3 > 0
       if self.length1 == self.length2 &&
         self.length2 == self.length3
         :equilateral
