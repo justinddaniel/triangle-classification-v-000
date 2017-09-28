@@ -12,9 +12,12 @@ class Triangle
     if self.length1 + self.length2 > self.length3 &&
       self.length1 + self.length3 > self.length2 &&
       self.length2 + self.length3 > self.length1
-      if self.length1 == self.length2 == self.length3
+      if self.length1 == self.length2 &&
+        self.length2 == self.length3
         "equilateral"
-      elsif self.length1 != self.length2 =! self.length3
+      elsif self.length1 != self.length2 &&
+        self.length2 != self.length3
+        && self.length1 != self.length3
         "scalene"
       else
         "isosceles"
