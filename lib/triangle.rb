@@ -5,5 +5,26 @@ class Triangle
     @length2 = length2
     @length3 = length3
   end
-  
+
+  def kind
+    if self.length1 + self.length2 > self.length3 && 
+      self.length1 + self.length3 > self.length2 &&
+      self.length2 + self.length3 > self.length1
+      if self.length1 == self.length2 == self.length3
+        "equilateral"
+      elsif self.length1 != self.length2 =! self.length3
+        "scalene"
+      else 
+        "isosceles"
+      end
+        
+    else
+      begin
+        raise TriangleError
+      rescue TriangleError => error
+          puts error.message
+      end
+    end
+  end
+
 end
